@@ -1,4 +1,3 @@
-
 # 📈 Stock Market Analysis App
 
 A fully interactive **Stock Market Analysis web application** built using **HTML, CSS, and Vanilla JavaScript**. The app visualizes historical stock price data, shows key financial statistics, and provides company summaries — all fetched dynamically from APIs.
@@ -30,7 +29,7 @@ This project was built as part of an academic assignment and follows a **clean, 
 
 * 🧾 **Stock Details Section**
 
-  * Company summary fetched from API
+  * Company summary fetched from API (`stocksProfileData[0][SYMBOL].summary`)
   * Displays Peak (Max) and Low (Min) price for selected range
 
 * 🔄 **Fully Dynamic**
@@ -83,6 +82,12 @@ stock-market-analysis/
   https://stock-market-api-k9vl.onrender.com/api/profiledata
   ```
 
+  > The API returns `stocksProfileData`, where each stock symbol contains a nested `summary` field.
+  > [https://stock-market-api-k9vl.onrender.com/api/profiledata](https://stock-market-api-k9vl.onrender.com/api/profiledata)
+
+  ```
+  ```
+
 ---
 
 ## ⚙️ How to Run the Project
@@ -120,6 +125,8 @@ stock-market-analysis/
 * If a company summary is not available from the API, the app gracefully displays:
 
   > `No summary available.`
+
+  This is handled defensively by checking the presence of the `summary` field inside `stocksProfileData`.
 
 * Peak & Low values are calculated **dynamically** based on the selected range.
 
