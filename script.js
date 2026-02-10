@@ -205,9 +205,10 @@ async function renderDetails() {
 
     if (
       !data ||
-      !Array.isArray(data.profileData) ||
-      !data.profileData[0] ||
-      !data.profileData[0][selectedStock]
+      !Array.isArray(data.stocksProfileData) ||
+      !data.stocksProfileData[0] ||
+      !data.stocksProfileData[0][selectedStock] ||
+      !data.stocksProfileData[0][selectedStock].summary
     ) {
       title.innerText = selectedStock;
       summary.innerText = "No summary available.";
@@ -215,18 +216,18 @@ async function renderDetails() {
     }
 
     title.innerText = selectedStock;
-    summary.innerText = data.profileData[0][selectedStock];
-
-    // ✅ Appending peak & low here
-    summary.innerHTML += `
+    summary.innerHTML = `
+      ${data.stocksProfileData[0][selectedStock].summary}
       <br><br>
       <strong>Peak:</strong> $${window.currentPeak}<br>
       <strong>Low:</strong> $${window.currentLow}
     `;
   } catch (err) {
+    title.innerText = selectedStock;
     summary.innerText = "Error loading summary.";
   }
 }
+
 
 
 
