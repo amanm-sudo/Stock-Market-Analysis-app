@@ -101,7 +101,7 @@ stock-market-analysis/
 2. Navigate to the project folder
 
    ```bash
-   cd stock-market-analysis
+   cd Stock-Market-Analysis-app
    ```
 
 3. Open `index.html` in your browser
