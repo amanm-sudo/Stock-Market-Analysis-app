@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stock Market Analysis</title>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h2>Stock Market Analysis</h2>
+
+  <div class="container">
+    <div class="left">
+      <canvas id="chart"></canvas>
+      
+        <div id="details">
+            <h2 id="details-title"></h2>
+            <p id="details-summary"></p>
+        </div>
+
+      <div class="buttons">
+        <button data-range="1month">1month</button>
+        <button data-range="3month">3month</button>
+        <button data-range="1year">1year</button>
+        <button data-range="5year">5year</button>
+      </div>
+
+      <div id="details"></div>
+    </div>
+
+    <div class="right">
+      <ul id="stockList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

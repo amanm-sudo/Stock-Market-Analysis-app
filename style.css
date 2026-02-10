@@ -1,0 +1,40 @@
+body {
+  background: #0b1220;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+}
+
+.left {
+  width: 70%;
+}
+
+.right {
+  width: 30%;
+}
+
+button {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+li {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.green {
+  color: lime;
+}
+
+.red {
+  color: red;
+}
+canvas {
+  width: 100% !important;
+  height: 420px !important;
+}
